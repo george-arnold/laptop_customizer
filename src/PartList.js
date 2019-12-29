@@ -14,7 +14,8 @@ class PartList extends Component{
     return ( <form className="main__form">
     <h2>Customize your laptop</h2>
     <PartOptions 
-    features= {this.props.features} /> 
+    features= {this.props.features} 
+    selected= {this.props.selected}/> 
   </form>
     )
   }

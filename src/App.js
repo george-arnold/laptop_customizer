@@ -78,7 +78,9 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-        <PartList />
+        <PartList
+        features= {this.props.features}
+        selected= {this.props.selected} />
         
           <section className="main__summary">
             <h2>Your cart</h2>
