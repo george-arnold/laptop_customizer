@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import PartList from './PartList';
 import slugify from 'slugify';
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -39,7 +38,7 @@ class PartOptions extends Component {
       );
 
     });
-    
+   return features; 
     }
 }
 
