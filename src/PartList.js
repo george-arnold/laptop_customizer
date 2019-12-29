@@ -13,8 +13,7 @@ class PartList extends Component{
     console.log(this.props.features)
     return ( <form className="main__form">
     <h2>Customize your laptop</h2>
-    <PartOptions 
-    features = {this.props.features}/> 
+    <PartOptions /> 
   </form>
     )
   }
