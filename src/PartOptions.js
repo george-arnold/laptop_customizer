@@ -37,6 +37,7 @@ class PartOptions extends Component {
           {options}
         </fieldset>
       );
+
     });
     
     }
