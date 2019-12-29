@@ -18,3 +18,4 @@ class PartOptions extends Component{
         </div>
     )
 }}
+export default PartOptions;
