@@ -57,8 +57,7 @@ class App extends Component {
         <CartList 
         features= {this.props.features}
         selected= {this.state.selected} 
-        total= {this.props.total}
-        summary= {this.props.summary} />
+        />
 
         </main>
       </div>
