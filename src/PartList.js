@@ -15,7 +15,8 @@ class PartList extends Component{
     <h2>Customize your laptop</h2>
     <PartOptions 
     features= {this.props.features} 
-    selected= {this.props.selected}/> 
+    selected= {this.props.selected}
+    updateFeature = {this.props.updateFeature}/> 
   </form>
     )
   }

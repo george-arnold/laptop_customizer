@@ -53,10 +53,12 @@ class App extends Component {
         <main>
         <PartList
         features= {this.props.features}
-        selected= {this.state.selected} />
+        selected= {this.state.selected}
+        updateFeature = {this.updateFeature} />
         <CartList 
         features= {this.props.features}
-        selected= {this.state.selected} 
+        selected= {this.state.selected}
+
         />
 
         </main>

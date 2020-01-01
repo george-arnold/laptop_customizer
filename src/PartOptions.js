@@ -1,5 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import slugify from 'slugify';
+import Feature from './Feature';
+
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD'
@@ -7,6 +9,14 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 class PartOptions extends Component {
   render() {
+    // const features = Object.keys(this.props.features);
+    // return features.map((feature,index) => (
+    //   <Feature
+    //    feature={feature}
+    //    index={index} />
+    // ))
+    // console.log(features);
+
     const features = Object.keys(this.props.features).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
       const options = this.props.features[feature].map(item => {
@@ -19,7 +29,7 @@ class PartOptions extends Component {
               className="feature__option"
               name={slugify(feature)}
               checked={item.name === this.props.selected[feature].name}
-              onChange={e => this.updateFeature(feature, item)}
+              onChange={e => this.props.updateFeature(feature, item)}
             />
             <label htmlFor={itemHash} className="feature__label">
               {item.name} ({USCurrencyFormat.format(item.cost)})
@@ -36,10 +46,9 @@ class PartOptions extends Component {
           {options}
         </fieldset>
       );
-
     });
-   return features; 
-    }
+    return features;
+  }
 }
 
 export default PartOptions;
